@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố </title>
+</head>
+<body>
+<h3>Dãy số nguyên tố</h3>
+<label for="number">Nhập vào một số</label>
+<input type="text" id="number"/><br>
+<button type="button" onclick="primeNumbers()">In ra</button>
+<p id="result"></p>
+
+<script>
+    function primeNumbers() {
+        let numbers = +document.getElementById("number").value;
+        let count = 0;
+        let n = 0;
+        let result = "";
+
+        for (let i = 2; i < 1000; i++) {
+            if (n < numbers) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        count += 1;
+                    }
+                }
+                if (count == 2) {
+                    result += i + "<br>";
+                    n += 1;
+                }
+                count = 0;
+            } else {
+                break;
+            }
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

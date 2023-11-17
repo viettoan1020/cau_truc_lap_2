@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy 20 số fibonaci</title>
+</head>
+<body>
+<script>
+
+  let a=0;
+  let b=1;
+  let next =0;
+  document.write(a + "</br>");
+  document.write(b + "</br>");
+  for (i = 0; i < 18; i++) {
+    next = a+b;
+    document.write(next + "</br>")
+    a=b;
+    b=next;
+  }
+
+</script>
+</body>
+</html>

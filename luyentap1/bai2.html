@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đo nhiệt độ</title>
+</head>
+<body>
+<script>
+    let temp = parseFloat(prompt("Hãy nhập nhiệt độ"));
+        while (!isNaN(temp)) {
+            if (temp > 100) {
+                alert("Hãy giảm nhiệt độ");
+            } else
+                if (temp < 20) {
+                    alert("Hãy tăng nhiệt độ");
+                } else {
+                    alert("Bạn đang ở nhiệt độ hợp lý");
+                    break;
+                }
+                temp =parseFloat(prompt("Hãy nhập nhiệt độ"));
+        }
+</script>
+</body>
+</html>
